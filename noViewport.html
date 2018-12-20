@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <title>视屏幕装置宽度</title>
     <style>
         body {
@@ -23,7 +22,7 @@
 
 <body>
     <div id="box">这个元素（div＃box）宽度为100％</div>
-    <p><a href="noViewport.html">设置meta viewport</a></p>
+    <p><a href="index.html">不设置meta viewport</a></p>
     <p><button id="refresh">刷新数据</button></p>
     <div id="log">
 
@@ -44,14 +43,14 @@
                 log('screen.width: ' + screen.width);
                 log('window.outerWidth: ' + window.outerWidth);
                 log('window.innerWidth: ' + window.innerWidth);
-                log('window.innerHeight: ' + window.innerHeight);
-                log('window.devicePixelRatio: ' + window.devicePixelRatio);
-
-
-                log('document.documentElement.clientWidth: ' + document.documentElement.clientWidth);
+                log('document.documentElement.clientWidth: ' +
+                    document.documentElement.clientWidth);
 
                 var box = document.getElementById('box');
                 log('div#box width: ' + box.offsetWidth);
+
+                log('window.devicePixelRatio: ' + window.devicePixelRatio);
+                log('window.innerHeight: ' + window.innerHeight);
             };
             outputData();
 
