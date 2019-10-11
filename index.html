@@ -40,18 +40,17 @@
 
             function outputData() {
                 var el = document.getElementById('log');
+                var box = document.getElementById('box');
                 el.innerHTML = '';
+
                 log('screen.width: ' + screen.width);
+                log('document.documentElement.clientWidth: ' + document.documentElement.clientWidth);
+                log('div#box width: ' + box.offsetWidth);
+
                 log('window.outerWidth: ' + window.outerWidth);
                 log('window.innerWidth: ' + window.innerWidth);
                 log('window.innerHeight: ' + window.innerHeight);
                 log('window.devicePixelRatio: ' + window.devicePixelRatio);
-
-
-                log('document.documentElement.clientWidth: ' + document.documentElement.clientWidth);
-
-                var box = document.getElementById('box');
-                log('div#box width: ' + box.offsetWidth);
             };
             outputData();
 
